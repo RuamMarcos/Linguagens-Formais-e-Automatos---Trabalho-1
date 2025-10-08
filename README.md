@@ -1,28 +1,66 @@
-Simulador de Autômato Finito Determinístico em Python
-Este repositório contém a implementação de um Autômato Finito Determinístico (AFD) como parte de uma atividade acadêmica. O script em Python simula o comportamento de um autômato específico, processando cadeias de caracteres para determinar se pertencem ou não à linguagem definida.
+# 🧮 Simulador de Autômato Finito Determinístico (AFD)
 
-Autor: Ruam Marcos Maciel dos Santos
+**Autor:** Ruam Marcos Maciel dos Santos  
 
-O Autômato
-O AFD implementado neste projeto é representado pelo seguinte diagrama de estados:
+---
 
-Fundamentação Teórica
-A lógica principal do simulador baseia-se na função de transição estendida, denotada por δ̂(q, w), que descreve o estado em que o autômato se encontrará após processar uma palavra w a partir de um estado q. A função é definida indutivamente:
+## 📘 1. Sobre o Projeto
 
-Base: Para uma palavra vazia (ε), o autômato permanece no estado atual.
+Este script em **Python** implementa e simula um **Autômato Finito Determinístico (AFD)**, permitindo validar se determinadas palavras pertencem a uma linguagem específica.
 
-δ
-^
- (q,ϵ)=q
-$$$$
+O autômato foi desenvolvido com base no **diagrama visual** incluído nos arquivos do projeto.
 
-Indução: Para uma palavra w que pode ser decomposta em uma sub-palavra x e um símbolo final a (ou seja, w = xa), a função é definida como:
+---
 
-δ
-^
- (q,xa)=δ( 
-δ
-^
- (q,x),a)
-$$$$
-$$A implementação em Python utiliza recursividade para espelhar essa definição formal.
+## ⚙️ 2. Como Executar
+
+### **Requisitos**
+- Python 3 instalado no sistema.
+
+### **Passos para execução**
+1. Abra um terminal ou prompt de comando.  
+2. Navegue até o diretório onde o arquivo `AFD_reescrito.py` está salvo.  
+3. Execute o comando abaixo:
+
+```bash
+python AFD_reescrito.py
+```
+
+---
+
+## 🧾 3. Exemplo de Saída do Script
+
+```
+Iniciando simulação do AFD...
+----------------------------------------
+Palavra de entrada: 'babaaab'
+  -> Estado de parada: 'q5'
+  -> Resultado: Palavra ACEITA
+----------------------------------------
+Palavra de entrada: 'aabba'
+  -> Estado de parada: 'q6'
+  -> Resultado: Palavra ACEITA
+----------------------------------------
+Palavra de entrada: 'aaa'
+  -> Estado de parada: 'q4'
+  -> Resultado: Palavra ACEITA
+----------------------------------------
+Palavra de entrada: 'bbb'
+  -> Estado de parada: 'q0'
+  -> Resultado: Palavra REJEITA
+----------------------------------------
+Palavra de entrada: 'ababab'
+  -> Estado de parada: 'q7'
+  -> Resultado: Palavra ACEITA
+----------------------------------------
+Palavra de entrada: 'ababaaba'
+  -> Estado de parada: 'q2'
+  -> Resultado: Palavra REJEITA
+----------------------------------------
+```
+
+---
+
+## 🧩 Observação
+
+O comportamento e as transições do autômato podem ser personalizados editando diretamente o código ou o arquivo de configuração correspondente ao diagrama visual fornecido.
